@@ -11,7 +11,7 @@ $(document).ready(function() {
 function initializePage() {
 	$('.project a').click(addProjectDetails);
 
-	$('.project a').click(callBack);
+	//$('.project a').click(callBackFn);
 	//$('#colorBtn').click(randomizeColors);
 }
 
@@ -29,9 +29,11 @@ function addProjectDetails(e) {
 
 	console.log("User clicked on project " + idNumber);
 
+
+
 }
 
-function callBack(e) {
-	//
-	$.get('');
+function callBackFn(e) {
+	var randomProject = $('.project a').get("project/random");
+	$.post("randomProject", {"json":"json"});
 }
