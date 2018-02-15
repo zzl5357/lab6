@@ -16,6 +16,7 @@ function statusChangeCallback(response) {
         console.log('Successfully logged in with Facebook');
          FB.api('/me?fields=name,first_name,picture.width(480)', changeUser);
   }
+}
 
   function changeUser(response){
     console.log('changeUser being called!!!!!!!!');
@@ -23,4 +24,3 @@ function statusChangeCallback(response) {
     $("#name").text(response.name);
     $("#photo").attr("src", "response.picture.data.url");
   }
-}
